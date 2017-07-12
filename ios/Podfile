@@ -8,7 +8,7 @@ target 'ParkFinder' do
   pod 'GooglePlaces'
   pod 'GoogleMaps'
   pod 'GooglePlacePicker'
- 
+
 end
 
 target 'ParkFinder' do
@@ -22,10 +22,10 @@ target 'ParkFinder' do
     # Pods for testing
   end
 
-  target 'ParkFinderTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  # target 'ParkFinderTests' do
+  #   inherit! :search_paths
+  #   # Pods for testing
+  # end
 
 end
 

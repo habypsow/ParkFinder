@@ -7,8 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <GooglePlaces/GooglePlaces.h>
-#import <GoogleMaps/GoogleMaps.h> 
+@import GooglePlaces;
+@import GoogleMaps;
 
 #import "AppDelegate.h"
 
@@ -19,6 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  NSString *kAPIKey = @"AIzaSyDl3wgOiDflGbUlR6aTuWkb0-VdaJC3PLY";
+  [GMSPlacesClient provideAPIKey:kAPIKey];
+  [GMSServices provideAPIKey:kAPIKey];
+
   NSURL *jsCodeLocation;
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
