@@ -2,6 +2,9 @@
 #
 .DS_Store
 
+#ios podfile
+ios/
+
 # Xcode
 #
 build/
