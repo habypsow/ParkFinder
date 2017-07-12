@@ -7,6 +7,9 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+#import <GooglePlaces/GooglePlaces.h>
+#import <GoogleMaps/GoogleMaps.h> 
+
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
