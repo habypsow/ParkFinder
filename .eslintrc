@@ -1,0 +1,7 @@
+# {
+#   "extends" : "rallycoding"
+# }
+
+{
+  "extends": "eslint:recommended"
+}
