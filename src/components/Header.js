@@ -2,7 +2,15 @@ import React from 'react';
 import { Text } from 'react-native';
 
 const Header = () => {
-  return <Text>ParkFinder</Text>;
+  const { textStyle } = styles;
+
+  return <Text style={textStyle}>ParkFinder</Text>;
+};
+
+const styles = {
+  textStyle: {
+    fontSize: 20
+  }
 };
 
 export default Header;
