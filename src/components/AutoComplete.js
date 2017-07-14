@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text  } from 'react-native';
+import { View, Text } from 'react-native';
 import RNGooglePlaces from 'react-native-google-places';
+import Button from './Button';
 
-class GPlacesDemo extends Component {
+class AutoComplete extends Component {
   openSearchModal() {
     RNGooglePlaces.openAutocompleteModal()
     .then((place) => {
@@ -15,14 +16,25 @@ class GPlacesDemo extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <TouchableOpacity
-          style={styles.button}
+      <View style={styles.containerStyle}>
+        <Button
           onPress={() => this.openSearchModal()}
         >
           <Text>Pick a Place</Text>
-        </TouchableOpacity>
+        </Button>
       </View>
     );
   }
 }
+
+  const styles = {
+    containerStyle: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      // backgroundColor: '#F5FCFF',
+    }
+  };
+
+
+  export default AutoComplete;
