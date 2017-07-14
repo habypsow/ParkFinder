@@ -19,7 +19,7 @@ class AutoComplete extends Component {
       <View style={styles.containerStyle}>
         <Button
           onPress={() => this.openSearchModal()}
-        ><Text>Pick a Place</Text>
+        >Pick a Place
         </Button>
       </View>
     );
