@@ -5,7 +5,10 @@ import Button from './Button';
 
 class AutoComplete extends Component {
   openSearchModal() {
-    RNGooglePlaces.openAutocompleteModal()
+    RNGooglePlaces.openAutocompleteModal({
+      type: 'establishment',
+      country: 'US'
+    })
     .then((place) => {
         console.log(place);
         // place represents user's selection from the

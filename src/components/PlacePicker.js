@@ -20,7 +20,7 @@ class PlacePicker extends Component {
       <View style={styles.container}>
       <Button
       onPress={() => this.openSearchModal()}
-      >console.log("I am in picker");
+      >
       Open Place Picker
       </Button>
       </View>
