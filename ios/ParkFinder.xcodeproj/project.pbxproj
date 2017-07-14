@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -40,6 +39,7 @@
 		9100889A422848FB88B89092 /* libRNGooglePlaces.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F738BBE63E44D0A2AAFC4B /* libRNGooglePlaces.a */; };
 		99E7AD531378909CCB5482C3 /* libPods-ParkFinder-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3834883B119C20C09AA4023E /* libPods-ParkFinder-tvOS.a */; };
 		CC7FA1A8EFCC85AA140765B7 /* libPods-ParkFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B9614FF8A861386B35802E /* libPods-ParkFinder.a */; };
+		809EF8FFDF774A54B9D14C32 /* libRNGooglePlacePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB34200C5048E8873E4905 /* libRNGooglePlacePicker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,6 +270,8 @@
 		C22244C0142AC7ECE2752CE4 /* Pods-ParkFinder-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkFinder-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkFinder-tvOSTests/Pods-ParkFinder-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE96C6AC897F75B1F6442C07 /* Pods-ParkFinder-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkFinder-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkFinder-tvOSTests/Pods-ParkFinder-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E1B9614FF8A861386B35802E /* libPods-ParkFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParkFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D717434AC37461D929DEF30 /* RNGooglePlacePicker.xcodeproj */ = {isa = PBXFileReference; name = "RNGooglePlacePicker.xcodeproj"; path = "../node_modules/react-native-google-place-picker/ios/RNGooglePlacePicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C9DB34200C5048E8873E4905 /* libRNGooglePlacePicker.a */ = {isa = PBXFileReference; name = "libRNGooglePlacePicker.a"; path = "libRNGooglePlacePicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				9100889A422848FB88B89092 /* libRNGooglePlaces.a in Frameworks */,
 				CC7FA1A8EFCC85AA140765B7 /* libPods-ParkFinder.a in Frameworks */,
+				809EF8FFDF774A54B9D14C32 /* libRNGooglePlacePicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +483,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				12326ADDC3544041835AD2B2 /* RNGooglePlaces.xcodeproj */,
+				3D717434AC37461D929DEF30 /* RNGooglePlacePicker.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1155,12 +1159,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-google-place-picker/ios",
 				);
 				INFOPLIST_FILE = ParkFinderTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1180,12 +1186,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-google-place-picker/ios",
 				);
 				INFOPLIST_FILE = ParkFinderTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1207,6 +1215,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-google-place-picker/ios",
 				);
 				INFOPLIST_FILE = ParkFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1229,6 +1238,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-google-place-picker/ios",
 				);
 				INFOPLIST_FILE = ParkFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1258,11 +1268,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-google-place-picker/ios",
 				);
 				INFOPLIST_FILE = "ParkFinder-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1293,11 +1305,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-google-places/ios",
+					"$(SRCROOT)/../node_modules/react-native-google-place-picker/ios",
 				);
 				INFOPLIST_FILE = "ParkFinder-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1329,6 +1343,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ParkFinder-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1354,6 +1369,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ParkFinder-tvOSTests";
