@@ -6,9 +6,13 @@ import Button from './Button';
 
 class PlacePicker extends Component {
   openSearchModal() {
-    RNGooglePlaces.openPlacePickerModal()
+    RNGooglePlaces.openPlacePickerModal({
+      latitude: 47.6097,
+      longitude: -122.3331,
+      radius: 0.10 // 500 meters
+    })
     .then((place) => {
-      console.log(place);
+          console.log(place.getPlaceTypes());
       // place represents user's selection from the
       // suggestions and it is a simplified Google Place object.
     })
