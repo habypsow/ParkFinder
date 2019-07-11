@@ -12,7 +12,7 @@ class PlacePicker extends Component {
       radius: 0.10 // 500 meters
     })
     .then((place) => {
-          console.log(place.getPlaceTypes());
+          console.log(place);
       // place represents user's selection from the
       // suggestions and it is a simplified Google Place object.
     })
